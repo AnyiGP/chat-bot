@@ -1,0 +1,78 @@
+* {
+  margin: auto;
+  padding: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor {
+  width: 100%;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: white;
+  box-shadow: inset 1px 10px 10px -3px rgba(170, 170, 170, 0.371);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**********
+CHAT-BOT
+************/
+.contenedor-chat {
+  width: 40%;
+  height: auto;
+  margin: 1em;
+  padding: 1em;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.respuesta {
+  font-size: 20px;
+}
+
+.contenedor-respuesta {
+  width: 80%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: cadetblue;
+  border: 1px solid grey;
+  border-radius: 10px 10px 0px 10px;
+  display: flex;
+}
+
+.contenedor-pregunta {
+  width: 80%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: cadetblue;
+  border: 1px solid grey;
+  border-radius: 10px 10px 0px 10px;
+  display: flex;
+  align-items: end;
+  justify-content: right;
+}
+
+.contenedor-mensaje {
+  width: 80%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: cadetblue;
+  border: 1px solid grey;
+  border-radius: 10px 10px 10px 0px;
+  display: flex;
+}
