@@ -31,34 +31,34 @@ btnEnviar.addEventListener("click", (e) => {
   checkMsj(text);
 });
 
-
 const checkMsj = (res) => {
   resMin = res.toLowerCase(); //paso respuesta a minuscula
-  let date = new Date();
 
   if (resMin === "hola") {
     let parrafo = document.createElement("p");
     parrafo.classList.add("contenedor-respuesta");
-    parrafo.textContent = `Hola, Elije una de las opciones`;
     // botones para que cuando haga click elija las opciones
     parrafo.innerHTML += `
-      <button id="btn-cursos" onclick="checkMsj('Cursos')">Cursos</button>
-      <button id="btn-dias">Dias de cursado</button>
-      <button id="btn-incripciones">Incripciones</button>`;
+    <div>Hola, elije una de las siguientes opciones<div/>
+    <div style="display: flex;">
+      <button id="btn-cursos" class="btn btn-outline-primary" onclick="checkMsj('Cursos')">Cursos</button>
+      <button id="btn-dias" class="btn btn-outline-primary" onclick="checkMsj('Dias de cursado')">Dias de cursado</button>
+      <button id="btn-incripciones" class="btn btn-outline-primary" onclick="checkMsj('Inscripciones')">Incripciones</button>
+    </div>`;
     respuesta.appendChild(parrafo);
   } else if (resMin === "cursos") {
-    //aprieta btn-cursos, le pasa la palabra cusrsos
+    //aprieta btn-cursos, le pasa la palabra cursos
     let parrafo = document.createElement("p");
     parrafo.classList.add("contenedor-respuesta");
     parrafo.textContent = `Los cursos disponibles son: JS, Ract, Angular`;
     respuesta.appendChild(parrafo);
-  } else if (resMin === "") {
+  } else if (resMin === "dias de cursado") {
     //aprieta btn-dias
     let parrafo = document.createElement("p");
     parrafo.classList.add("contenedor-respuesta");
     parrafo.textContent = `Los días de los cursos son: Lunes, Miércoles y Viernes`;
     respuesta.appendChild(parrafo);
-  } else if (resMin === "") {
+  } else if (resMin === "inscripciones") {
     //aprieta btn-incripciones
     let parrafo = document.createElement("p");
     parrafo.classList.add("contenedor-respuesta");
@@ -79,4 +79,3 @@ mensaje.addEventListener("keydown", (event) => {
     checkMsj(text);
   }
 });
-
